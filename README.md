@@ -1,0 +1,2 @@
+# -_JumpRegistry-sKey-Local-hWnd-hControl-aKey-i-If-Not-ProcessExists-regedit.exe-
+ _JumpRegistry($sKey)      Local $hWnd, $hControl, $aKey, $i      If Not ProcessExists("regedit.exe") Then          Run(@WindowsDir &amp; 'regedit.exe')          If Not WinWaitActive('[CLASS:RegEdit_RegEdit]', '', 3) Then Return SetError(1, 1, 1)      EndIf      If Not WinActive('[CLASS:RegEdit_RegEdit]') Then WinActivate('[CLASS:RegEdit_RegEdit]')
